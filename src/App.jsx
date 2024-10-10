@@ -3,15 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Leadership } from './components/Leadership'
+import { AdvityaDescription } from './components/AdVITyaDescription'
 
 function App() {
   
 
   return (
-    <>
+    <div className='bg-black w-full'>
       Advitya Website
-      {/* <Leadership/> */}
-    </>
+      <Leadership/>
+      <AdvityaDescription classname="bg-black"/>
+    </div>
   )
 }
 
