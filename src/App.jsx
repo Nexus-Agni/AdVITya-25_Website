@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Leadership } from './components/Leadership'
-import { AdvityaDescription } from './components/AdVITyaDescription'
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import { TechEvents } from "./pages/TechEvents";
+import { NonTechEvents } from "./pages/NonTechEvents";
 
 function App() {
-  
-
   return (
-    <div className='bg-black w-full'>
-      Advitya Website
-      <Leadership/>
-      <AdvityaDescription classname="bg-black"/>
-    </div>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/technical-events" element={<TechEvents />} />
+        <Route path="/non-technical-events" element={<NonTechEvents />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
