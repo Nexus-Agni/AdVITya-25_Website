@@ -1,7 +1,7 @@
 import { Leadership } from "../components/Leadership";
 import { AdvityaDescription } from "../components/AdVITyaDescription";
 import { ClubEvents } from "../components/ClubEvents";
-import { Sponsors } from "../components/Sponsors";
+// import { Sponsors } from "../components/Sponsors";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
         <Leadership />
         <AdvityaDescription classname="bg-black" />
         <ClubEvents />
-        <Sponsors />
+        {/* <Sponsors /> */}
       </div>
     </div>
   );
