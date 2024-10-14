@@ -1,7 +1,9 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/useOutsideClick";
+import GradientText from "../components/ui/GradientText";
 import { nonTechnicalEvents } from "../components/Events";
+import { FocusCards } from "../components/ui/focus-cards";
 
 export function NonTechEvents() {
   const [active, setActive] = useState(null);
@@ -29,9 +31,13 @@ export function NonTechEvents() {
 
   return (
     <>
-      <h1 className="text-3xl text-yellow-400 underline text-center mb-8 pt-8">
+      <GradientText
+        animationSpeed={10}
+        showBorder={false}
+        className="text-6xl py-16"
+      >
         Non Technical Events
-      </h1>
+      </GradientText>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -62,9 +68,7 @@ export function NonTechEvents() {
               }}
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
+            ></motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
@@ -127,75 +131,7 @@ export function NonTechEvents() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6">
-        {nonTechnicalEvents.map((card) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={card.title}
-            onClick={() => setActive(card)}
-            className="p-6 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-          >
-            <div className="flex gap-6 flex-col w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
-                <img
-                  width={150}
-                  height={150}
-                  src={card.src}
-                  alt={card.title}
-                  className="h-72 w-full rounded-lg object-cover object-top"
-                />
-              </motion.div>
-              <div className="flex justify-center items-center flex-col">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-lg"
-                >
-                  {card.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`clubName-${card.clubName}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-lg"
-                >
-                  {card.clubName}
-                </motion.p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </ul>
+      <FocusCards cards={nonTechnicalEvents} setActive={setActive} />
     </>
   );
 }
-
-export const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
-      }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-black"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
