@@ -78,7 +78,7 @@ export const Card = ({
   );
 };
 
-// ... rest of your code
+
 export const CardTitle = ({
   className,
   children,
