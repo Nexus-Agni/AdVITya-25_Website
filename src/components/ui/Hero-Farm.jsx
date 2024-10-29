@@ -24,7 +24,7 @@ const HeroFarm = () => {
                 </div>
             <div>
                     <div className="mx-auto flex h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-10 lg:px-24">
-                        <h1 className="text-text-primary dark:text-dark-text-primary text-pretty text-center text-4xl  sm:text-5xl md:text-6xl  lg:text-[clamp(50px,7vw,75px)] font-medium leading-none tracking-[-1.44px] md:max-w-screen-lg md:tracking-[-2.16px]">
+                        <h1 className="text-text-primary dark:text-dark-text-primary text-pretty text-center text-4xl  sm:text-5xl md:text-6xl  lg:text-[clamp(50px,7vw,75px)] font-medium leading-none tracking-[-1.44px] md:max-w-screen-lg md:tracking-[-2.16px] text-white">
                             Developer First Headless CMS for solo&apos;s and enterprice
                         </h1>
                         <h2 className="text-md text-text-tertiary dark:text-dark-text-tertiary max-w-2xl text-pretty text-center md:text-lg">
@@ -36,25 +36,16 @@ const HeroFarm = () => {
 
                 <div className=" dark:divide-dark-border flex items-start justify-center divide-y divide-white/10  px-8 sm:px-24">
                     <div className="flex w-full max-w-[80vw] flex-col items-center justify-start md:!max-w-[392px]">
+                        
                         <a href="/docs" className="cursor-pointer w-full">
-                            <div
-                                className={clsx(
-                                    '!h-14 flex-col items-center justify-center rounded-none !text-base',
-                                    'max-w-sm:!border-x-0 dark:border-dark-border flex w-full !border-x !border-y-0 border-white/10 !bg-transparent backdrop-blur-xl transition-colors duration-150 hover:!bg-black/5 dark:hover:!bg-white/5',
-                                )}
-                            >
-                                Learn more
-                            </div>
-                        </a>
-                        <a href="/docs" className="cursor-pointer w-full">
-                            <div
+                            {/* <div
                                 className={clsx(
                                     'text-white dark:text-black boder-2 !h-14 flex-col items-center justify-center rounded-none border-none !text-base',
                                     'flex w-full border-[1.2px] border-white/5 bg-gradient-to-tr from-purple-800 via-purple-700 to-purple-400',
                                 )}
                             >
                                 Get started
-                            </div>
+                            </div> */}
                         </a>
                     </div>
                 </div>
