@@ -8,10 +8,17 @@ import {
 import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
+import { Navbar } from "./Navbar";
+import { Button } from "./ui/moving-border";
+import MainImage from "../assets/AdVITya3.png";
+
+const HeroImages = {
+  main: MainImage,
+};
 
 export const HeroSection = () => {
   return (
-    <div className="bg-zinc-950">
+    <div className=" ">
       <ReactLenis
         root
         options={{
@@ -21,7 +28,9 @@ export const HeroSection = () => {
           //   syncTouch: true,
         }}
       >
-        <Nav />
+        {/* <Nav /> */}
+        {/* <Navbar /> */}
+        
         <Hero />
         <Schedule />
       </ReactLenis>
@@ -29,23 +38,7 @@ export const HeroSection = () => {
   );
 };
 
-const Nav = () => {
-  return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 text-white">
-      <SiSpacex className="text-3xl mix-blend-difference" />
-      <button
-        onClick={() => {
-          document.getElementById("launch-schedule")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-        className="flex items-center gap-1 text-xs text-zinc-400"
-      >
-        LAUNCH SCHEDULE <FiArrowRight />
-      </button>
-    </nav>
-  );
-};
+
 
 const SECTION_HEIGHT = 1500;
 
@@ -53,7 +46,7 @@ const Hero = () => {
   return (
     <div
       style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
-      className="relative w-full"
+      className="relative w-full "
     >
       <CenterImage />
 
@@ -90,8 +83,7 @@ const CenterImage = () => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage:
-          "url(https://images.unsplash.com/photo-1460186136353-977e9d6085a1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+        backgroundImage: `url(${HeroImages.main})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
