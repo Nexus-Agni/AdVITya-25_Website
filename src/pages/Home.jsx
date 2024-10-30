@@ -4,7 +4,9 @@ import { Leadership } from "../components/Leadership";
 import { AdvityaDescription } from "../components/AdVITyaDescription";
 import { ClubEvents } from "../components/ClubEvents";
 import { Navbar } from "../components/Navbar";
+import Highlights from "../components/Highlights";
 import Preloader from "../components/ui/apple-preloader";
+import Footer from "../components/Footer";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -30,7 +32,9 @@ function Home() {
         <Hero />
         <Leadership />
         <AdvityaDescription classname="bg-black" />
+        <Highlights />
         <ClubEvents />
+        <Footer />
       </div>
     </div>
   );
