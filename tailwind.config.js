@@ -10,12 +10,13 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: "marquee var(--duration, 30s) linear infinite",
+        "x-slider": "x-slider 20s linear infinite",
         gradient: "gradient 8s linear infinite",
       },
       keyframes: {
-        marquee: {
-          to: { transform: "translateX(-50%)" },
+        "x-slider": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         gradient: {
           "0%": { backgroundPosition: "0% 50%" },
@@ -25,7 +26,8 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors,
+  plugins: [
+    addVariablesForColors,
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {
@@ -56,7 +58,7 @@ function addVariablesForColors({ addBase, theme }) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
