@@ -15,7 +15,7 @@ function Navbar1({ className }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className={cn(`fixed top-10 inset-x-0 max-w-5xl mx-auto z-50`, className)}>
+    <div className={cn(`fixed top-10 inset-x-0 max-w-5xl mx-auto z-50 rounded-full`, className)}>
       <Menu setActive={setActive} className="bg-white">
         <a href="#">
           <img src={logo} alt="Logo" className='h-12' />

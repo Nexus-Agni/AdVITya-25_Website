@@ -4,6 +4,7 @@ import Tech from "../assets/tech.png";
 import NonTech from "../assets/non-tech.png";
 import ProShow from "../assets/pro-show.png";
 
+
 export function ClubEvents() {
   const cards = [
     {
@@ -29,6 +30,7 @@ export function ClubEvents() {
   return (
     <>
       <div className="bg-zinc-950">
+      
         <div className="my-8 pt-20">
           <GradientText
             animationSpeed={10}
@@ -38,7 +40,9 @@ export function ClubEvents() {
             Our Events
           </GradientText>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto md:px-8 w-full">
+          
           {firstTwoCards.map((card, index) => (
             <CardContainer key={index} className="inter-var">
               <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">

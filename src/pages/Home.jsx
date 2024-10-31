@@ -7,6 +7,8 @@ import { Navbar } from "../components/Navbar";
 import Highlights from "../components/Highlights";
 import Preloader from "../components/ui/apple-preloader";
 import Footer from "../components/Footer";
+// import { ContactForm } from "../components/ContactForm";
+import ContactUsSection from "../components/ContactUsSection";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -15,7 +17,7 @@ function Home() {
     // Simulate a loading delay
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the delay as needed
+    }, 5000); // Adjust the delay as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -34,6 +36,7 @@ function Home() {
         <AdvityaDescription classname="bg-black" />
         <Highlights />
         <ClubEvents />
+        <ContactUsSection />
         <Footer />
       </div>
     </div>

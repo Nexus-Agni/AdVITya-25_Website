@@ -48,16 +48,16 @@ export function Leadership() {
         duration: 0.8,
         ease: "easeInOut",
       }}
-      className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-5xl"
+      className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-8xl text-white"
     >
-      Our Leadership
+      Meet Our Leadership
       {/* <div className="mt-[]">
         <HoverEffect items={LeadershipItems} />
       </div> */}
     </motion.h1>
     
   </LampContainer>
-  <motion.div className="max-w-5xl mx-auto px-8 flex flex-col md:flex-row flex-wrap items-center justify-center bg-slate-950 ">
+  <motion.div className="max-w-5xl mx-auto px-8 flex flex-col md:flex-row flex-wrap items-center justify-center bg-slate-950 rounded-2xl">
       {/* <Highlight className="text-yellow-300 text-6xl md:text-8xl">
         LEADERSHIP
       </Highlight> */}
