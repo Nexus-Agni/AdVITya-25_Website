@@ -18,7 +18,7 @@ function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-200 transition hover:text-purple-600"
                 >
                   <span className="sr-only">Facebook</span>
 
@@ -42,7 +42,7 @@ function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-200 transition hover:text-purple-600"
                 >
                   <span className="sr-only">Instagram</span>
 
@@ -66,7 +66,7 @@ function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-200 transition hover:text-purple-600"
                 >
                   <span className="sr-only">Twitter</span>
 
@@ -86,7 +86,7 @@ function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-200 transition hover:text-purple-600"
                 >
                   <span className="sr-only">GitHub</span>
 
@@ -110,7 +110,7 @@ function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75"
+                  className="text-gray-200 transition hover:text-purple-600"
                 >
                   <span className="sr-only">Dribbble</span>
 
