@@ -16,8 +16,8 @@ export function ContactForm() {
     document
       .getElementById("contactFormButton")
       .setAttribute("disabled", "disabled");
-    
-      if (
+
+    if (
       firstname === "" ||
       lastname === "" ||
       email === "" ||
@@ -36,14 +36,18 @@ export function ContactForm() {
       alert("Please enter a valid phone number");
       return;
     }
-    const formData = new FormData();
-    formData.append("firstname", firstname);
-    formData.append("lastname", lastname);
-    formData.append("email", email);
-    formData.append("phoneNumber", phoneNumber);
-    formData.append("message", message);
+    const formData = JSON.stringify({
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      phoneNumber: phoneNumber,
+      message: message,
+    });
     fetch("http://localhost:6969/saveQuery", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: formData,
     })
       .then((res) => {
